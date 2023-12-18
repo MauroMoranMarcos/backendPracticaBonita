@@ -9,18 +9,18 @@ public class IncidenciaDto {
     private String numeroSerieProducto;
 
     // 0 for "false" and 1 for "true"
-    private int garantia;
+    private Boolean garantia;
 
     private Double coste;
 
     // 0 for "false" and 1 for "true"
-    private int aceptado;
+    private Boolean aceptado;
 
     private String fechaCita;
 
     private String informe;
 
-    public IncidenciaDto(Long id, String descripcion, String numeroSerieProducto, int garantia, Double coste, int aceptado, String fechaCita, String informe) {
+    public IncidenciaDto(Long id, String descripcion, String numeroSerieProducto, Boolean garantia, Double coste, Boolean aceptado, String fechaCita, String informe) {
         this.id = id;
         this.descripcion = descripcion;
         this.numeroSerieProducto = numeroSerieProducto;
@@ -55,11 +55,11 @@ public class IncidenciaDto {
         this.numeroSerieProducto = numeroSerieProducto;
     }
 
-    public int getGarantia() {
+    public Boolean getGarantia() {
         return garantia;
     }
 
-    public void setGarantia(int garantia) {
+    public void setGarantia(Boolean garantia) {
         this.garantia = garantia;
     }
 
@@ -71,11 +71,11 @@ public class IncidenciaDto {
         this.coste = coste;
     }
 
-    public int getAceptado() {
+    public Boolean getAceptado() {
         return aceptado;
     }
 
-    public void setAceptado(int aceptado) {
+    public void setAceptado(Boolean aceptado) {
         this.aceptado = aceptado;
     }
 
