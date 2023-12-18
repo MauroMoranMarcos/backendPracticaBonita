@@ -25,6 +25,7 @@ CREATE TABLE Incidencia ( idIncidencia INT NOT NULL AUTO_INCREMENT,
                           coste FLOAT,
                           aceptado BOOLEAN,
                           fechaCita DATETIME,
+                          informe VARCHAR(1024),
                           CONSTRAINT IncidenciaPK PRIMARY KEY(idIncidencia)
                         ) ENGINE = InnoDB;
 
@@ -37,4 +38,6 @@ INSERT INTO DetallesCompra (numeroSerieProducto, email, precio, fechaCompra, nom
 INSERT INTO DetallesCompra (numeroSerieProducto, email, precio, fechaCompra, nombre) VALUES ('tabla99planchar', 'comprador@udc.es', 7, DATE_ADD(DATE(NOW()), INTERVAL '0 12:05' DAY_MINUTE), 'tabla planchar');
 
 INSERT INTO DetallesCompra (numeroSerieProducto, email, precio, fechaCompra, nombre) VALUES ('tabla2planchar', 'yocompro@udc.es', 7, DATE_ADD(DATE(NOW()), INTERVAL '0 07:55' DAY_MINUTE), 'tabla planchar');
+
+INSERT INTO Incidencia (descripcion, numeroSerieProducto, garantia, coste, aceptado, fechaCita) VALUES ('descripcion incidencia', 'tabla2planchar', true, 0, true, DATE_ADD(DATE(NOW()), INTERVAL '0 12:05' DAY_MINUTE));
 
