@@ -36,9 +36,9 @@ public class IncidenciaController {
     }
 
     @PostMapping("/agregarInforme/{idIncidencia}")
-    public void agregarInforme(@PathVariable Long idIncidencia, @RequestBody String informe) throws InstanceNotFoundException {
+    public void agregarInforme(@PathVariable Long idIncidencia, @RequestBody AgregarInformeParamsDto params) throws InstanceNotFoundException {
 
-        incidenciaService.agregarInforme(informe, idIncidencia);
+        incidenciaService.agregarInforme(params.getInforme(), idIncidencia);
 
     }
 
