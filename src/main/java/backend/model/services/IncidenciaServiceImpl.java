@@ -1,6 +1,6 @@
-package model.services;
+package backend.model.services;
 
-import model.entities.*;
+import backend.model.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

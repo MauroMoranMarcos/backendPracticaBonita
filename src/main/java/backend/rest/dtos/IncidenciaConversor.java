@@ -1,6 +1,6 @@
-package rest.dtos;
+package backend.rest.dtos;
 
-import model.entities.Incidencia;
+import backend.model.entities.Incidencia;
 
 public class IncidenciaConversor {
 

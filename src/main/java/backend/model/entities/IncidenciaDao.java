@@ -1,4 +1,4 @@
-package model.entities;
+package backend.model.entities;
 
 import org.springframework.data.repository.PagingAndSortingRepository;
 

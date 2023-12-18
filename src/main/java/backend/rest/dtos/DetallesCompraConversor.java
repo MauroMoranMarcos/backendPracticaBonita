@@ -1,6 +1,6 @@
-package rest.dtos;
+package backend.rest.dtos;
 
-import model.entities.DetallesCompra;
+import backend.model.entities.DetallesCompra;
 
 public class DetallesCompraConversor {
 

@@ -1,8 +1,6 @@
-package model.services;
+package backend.model.services;
 
-import model.entities.Producto;
-import model.entities.Incidencia;
-import model.entities.DetallesCompra;
+import backend.model.entities.DetallesCompra;
 
 import javax.management.InstanceNotFoundException;
 import java.time.LocalDateTime;

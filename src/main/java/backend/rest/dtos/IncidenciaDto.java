@@ -1,36 +1,36 @@
-package model.entities;
+package backend.rest.dtos;
 
-import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
-@Entity
-@Table(name = "Incidencia")
-public class Incidencia {
+public class IncidenciaDto {
 
     private Long id;
+
     private String descripcion;
+
     private String numeroSerieProducto;
+
+    // 0 for "false" and 1 for "true"
     private Boolean garantia;
+
     private Double coste;
+
+    // 0 for "false" and 1 for "true"
     private Boolean aceptado;
-    private LocalDateTime fechaCita;
+
+    private String fechaCita;
+
     private String informe;
 
-    public Incidencia() {}
-
-    public Incidencia(String descripcion, String numeroSerieProducto, Boolean garantia, Double coste, Boolean aceptado,
-                      LocalDateTime fechaCita) {
+    public IncidenciaDto(Long id, String descripcion, String numeroSerieProducto, Boolean garantia, Double coste, Boolean aceptado, String fechaCita, String informe) {
+        this.id = id;
         this.descripcion = descripcion;
         this.numeroSerieProducto = numeroSerieProducto;
         this.garantia = garantia;
         this.coste = coste;
         this.aceptado = aceptado;
         this.fechaCita = fechaCita;
+        this.informe = informe;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
         return id;
     }
@@ -79,11 +79,11 @@ public class Incidencia {
         this.aceptado = aceptado;
     }
 
-    public LocalDateTime getFechaCita() {
+    public String getFechaCita() {
         return fechaCita;
     }
 
-    public void setFechaCita(LocalDateTime fechaCita) {
+    public void setFechaCita(String fechaCita) {
         this.fechaCita = fechaCita;
     }
 
