@@ -19,9 +19,6 @@ public class IncidenciaServiceImpl implements IncidenciaService{
     @Autowired
     private IncidenciaDao incidenciaDao;
 
-    @Autowired
-    private ProductoDao productoDao;
-
     @Override
     public DetallesCompra findDetallesCompraByNumeroSerieProducto(String numeroSerieProducto) throws InstanceNotFoundException {
         Optional<DetallesCompra> detallesCompra = detallesCompraDao.findByNumeroSerieProducto(numeroSerieProducto);
