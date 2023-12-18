@@ -1,27 +1,33 @@
-package rest.dtos;
+package model.entities;
 
-public class DetallesCompraDto {
+import javax.persistence.*;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "DetallesCompra")
+public class DetallesCompra {
 
     private Long id;
-
     private String numeroSerieProducto;
-
     private String email;
-
     private Double precio;
-
-    private String fechaCompra;
-
+    private LocalDateTime fechaCompra;
     private String nombre;
 
-    public DetallesCompraDto(Long id, String numeroSerieProducto, String email, Double precio, String fechaCompra, String nombre) {
-        this.id = id;
+    public DetallesCompra() {}
+
+    public DetallesCompra(String numeroSerieProducto, String email, Double precio, LocalDateTime fechaCompra,
+                          String nombre) {
         this.numeroSerieProducto = numeroSerieProducto;
         this.email = email;
         this.precio = precio;
         this.fechaCompra = fechaCompra;
         this.nombre = nombre;
     }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     public Long getId() {
         return id;
@@ -55,11 +61,11 @@ public class DetallesCompraDto {
         this.precio = precio;
     }
 
-    public String getFechaCompra() {
+    public LocalDateTime getFechaCompra() {
         return fechaCompra;
     }
 
-    public void setFechaCompra(String fechaCompra) {
+    public void setFechaCompra(LocalDateTime fechaCompra) {
         this.fechaCompra = fechaCompra;
     }
 
