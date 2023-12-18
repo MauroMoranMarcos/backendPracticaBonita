@@ -1,0 +1,4 @@
+project:
+  jwt:
+    signKey: Bu:GW8bgPlEw
+    expirationMinutes: 1440

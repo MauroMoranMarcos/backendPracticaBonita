@@ -24,7 +24,7 @@ public class IncidenciaServiceImpl implements IncidenciaService{
 
     @Override
     public DetallesCompra findDetallesCompraByNumeroSerieProducto(String numeroSerieProducto) throws InstanceNotFoundException {
-        Optional<DetallesCompra> detallesCompra = detallesCompraDao.findDetallesCompraByNumeroSerieProducto(numeroSerieProducto);
+        Optional<DetallesCompra> detallesCompra = detallesCompraDao.findByNumeroSerieProducto(numeroSerieProducto);
 
         if(detallesCompra.isEmpty()) {
             throw new InstanceNotFoundException("No se encuentran los detalles de compra para: " + numeroSerieProducto);
